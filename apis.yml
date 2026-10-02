@@ -1,23 +1,75 @@
 aid: blueworldtechnologies
+
 name: Blueworldtechnologies
-description: 'Blueworldtechnologies is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.blue.world/wp-content/uploads/2021/03/product_image.jpg
+
+description: 'Blue World Technologies develops and manufactures high‑temperature PEM methanol fuel cell components and systems for maritime, stationary and heavy‑duty transportation sectors. The company aims to provide green, efficient alternatives to combustion engines and diesel generators, focusing on renewable methanol solutions and advanced fuel cell platforms.'
+
 url: https://raw.githubusercontent.com/api-evangelist/blueworldtechnologies/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Energy
+- Fuel Cells
+- Maritime
+- Renewable
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/blueworldtechnologies-well-known.yml
+- type: Hosts
+  url: hosts/blueworldtechnologies-hosts.yml
+- type: Newsroom
+  url: https://www.blue.world/news/
+- type: Leadership
+  url: https://www.blue.world/about-us/leadership/
+- type: DomainSecurity
+  url: security/blueworldtechnologies-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/blueworldtechnologies
+  url: https://www.blue.world
+- type: TermsOfService
+  url: https://www.blue.world/terms/
+- type: PrivacyPolicy
+  url: https://www.blue.world/cookies-and-privacy-policy/
+- type: Support
+  url: https://www.blue.world/contact/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-29'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/blueworldtechnologies
+    status: 403
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

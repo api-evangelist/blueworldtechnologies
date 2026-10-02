@@ -1,0 +1,50 @@
+generated: '2026-10-02'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.blue.world
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: blue.world
+  role: api
+  relation: own
+- host: cn.blue.world
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: blue.world
+  role: other
+  relation: own
+- host: www.blue.world
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Leadership
+  - Website
+  - TermsOfService
+  - PrivacyPolicy
+  - Support
+  serves: []
+  registrable_domain: blue.world
+  role: website
+  relation: own
